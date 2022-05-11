@@ -59,7 +59,7 @@ const GroupChatModal = ({ children }) => {
 				}
 			};
 			const { data } = await axios.get(
-				`http://localhost:8000/api/user?search=${search}`,
+				`https://mern-chat-application-server.herokuapp.com/api/user?search=${search}`,
 				config
 			);
 			console.log(data);
@@ -100,7 +100,7 @@ const GroupChatModal = ({ children }) => {
 				}
 			};
 			const { data } = await axios.post(
-				`http://localhost:8000/api/chat/group`,
+				`https://mern-chat-application-server.herokuapp.com/api/chat/group`,
 				{
 					name: groupChatName,
 					users: JSON.stringify(selectedUsers.map((u) => u._id))

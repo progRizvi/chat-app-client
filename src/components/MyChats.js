@@ -26,7 +26,7 @@ const MyChats = ({ fetchAgain }) => {
 			};
 
 			const { data } = await axios.get(
-				"http://localhost:8000/api/chat",
+				"https://mern-chat-application-server.herokuapp.com/api/chat",
 				config
 			);
 			setChats(data);

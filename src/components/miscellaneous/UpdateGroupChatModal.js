@@ -47,7 +47,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
 				}
 			};
 			const { data } = await axios.get(
-				`http://localhost:8000/api/user?search=${search}`,
+				`https://mern-chat-application-server.herokuapp.com/api/user?search=${search}`,
 				config
 			);
 			console.log(data);
@@ -77,7 +77,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
 				}
 			};
 			const { data } = await axios.put(
-				`http://localhost:8000/api/chat/rename`,
+				`https://mern-chat-application-server.herokuapp.com/api/chat/rename`,
 				{
 					chatId: selectedChat._id,
 					chatName: groupChatName
@@ -135,7 +135,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
 				}
 			};
 			const { data } = await axios.put(
-				`http://localhost:8000/api/chat/groupadd`,
+				`https://mern-chat-application-server.herokuapp.com/api/chat/groupadd`,
 				{
 					chatId: selectedChat._id,
 					userId: user1._id
@@ -180,7 +180,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
 				}
 			};
 			const { data } = await axios.put(
-				`http://localhost:8000/api/chat/groupremove`,
+				`https://mern-chat-application-server.herokuapp.com/api/chat/groupremove`,
 				{
 					chatId: selectedChat._id,
 					userId: user1._id

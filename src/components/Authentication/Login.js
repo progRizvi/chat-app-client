@@ -40,7 +40,7 @@ const Login = () => {
 			};
 
 			const { data } = await axios.post(
-				"http://localhost:8000/api/user/login",
+				"https://mern-chat-application-server.herokuapp.com/api/user/login",
 				{ email, password },
 				config
 			);
